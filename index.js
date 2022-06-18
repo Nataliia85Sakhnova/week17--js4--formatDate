@@ -14,13 +14,13 @@ const formatDate = (date) => {
 formatDate();
 
 if (diff < 1000) {
-    console.log(formatDate(new Date(new Date - 1)), 'Прямо сейчас');
-} else if (diff < 30000) {
-    console.log(formatDate(new Date(new Date - 30 * 1000)), '30 сек. назад');
-} else if (diff < 300000) {
-    console.log(formatDate(new Date(new Date - 5 * 60 * 1000)), '5 минут назад');
+    console.log(formatDate(new Date(new Date - 1000)), 'Прямо сейчас');
+} else if (diff < 60000) {
+    console.log(formatDate(new Date(new Date - 60 * 1000)), '1 минуту назад');
+} else if (diff < 3600000) {
+    console.log(formatDate(new Date(new Date - 60 * 60 * 1000)), '1 час назад');
 } else {
     console.log(formatDate(new Date(new Date - 86400* 4 * 1000)), diff);
 }
-
+formatDate(new Date(new Date - 86400* 4 * 1000))
 
