@@ -18,7 +18,9 @@ const formatDate = (date) => {
             // return
             alert (`${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`);
         }
-        // formatDate(new Date(new Date - 86400* 4 * 1000))
     }
-
-        document.getElementById('button').onclick = () => formatDate();
+        
+        formatDate(new Date(new Date - 1));
+        formatDate(new Date(new Date - 30 * 1000));
+        formatDate(new Date(new Date - 5 * 60 * 1000));
+        formatDate(new Date(new Date - 86400* 4 * 1000));
